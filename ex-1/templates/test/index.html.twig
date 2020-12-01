@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home Page!{% endblock %}
+{% block stylesheets %}
+<style>
+
+body {
+    background-image:url("https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704__480.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+</style>
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="container">
+<div class="row">
+{{destination.name}}
+</div>
+</div>
+
+
+
+{% endblock %}
