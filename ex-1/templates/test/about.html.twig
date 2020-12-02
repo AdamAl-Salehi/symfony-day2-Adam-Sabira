@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="container">
+<div class="row">
+<div class="col-10">
+<h2>This are the Destinations</h2>
+ {% for dest in  destination  %}
+                <ul>
+                        <li>{{ dest.name }}</li>
+                        <li>{{  dest.price }}</li>
+                        <li>{{  dest.date }}</li>
+                        <li><img src="{{  dest.image }}"></li>
+                </ul>
+                {% endfor %}
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}

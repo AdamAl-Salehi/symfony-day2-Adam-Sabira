@@ -1,0 +1,33 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+          <div class="container">   
+   <div class="row mt-5">
+   <div class="col-8 m-auto"> 
+      {#  <hr>
+       <h2 class="page-header" >{{product.name}}</h2>
+       <ul  class="list-group">
+               <li  class="list-group-item">Price: {{product.price}}</li>
+               <li class="list-group-item" >Image:<img src="{{product.image}}"></li>
+               <li class="list-group-item">Type: <strong> {{product.type}} </strong > </li>
+       </ul>
+       <p>
+               {{product.description}}
+       </p><br>
+       <a class="btn btn-default" href="/" >Back to Home Page</a> #}
+       <div class="card mb-3">
+       <h5 class="card-title">{{product.name}}</h5>
+  <img src="{{product.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+    <p class="card-text text-center">{{product.description}}</p>
+    <p class="card-text text-center">{{product.type}}</p>
+    <p class="card-text text-center"><small class="text-muted">{{product.price}}</small></p>
+    <a class="btn btn-default" href="/" >Back to Home Page</a>
+  </div>
+</div>
+
+       </div>
+       </div>
+       </div>
+{% endblock %}

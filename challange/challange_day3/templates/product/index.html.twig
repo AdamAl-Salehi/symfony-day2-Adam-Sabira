@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   <div class="container">   
+   <div class="row mt-5">
+   <div class="col-10 m-auto"> 
+<h2  class="page-header">Cameras </h2>
+ {#   <table class="table table-striped">
+   <thead >
+       <tr>
+           <th>id</th >
+           <th>name</th>
+           <th>price</th>
+           <th>image</th>
+       </tr>
+   </thead>
+   {% for product in products %} 
+   <tbody>
+       <tr>
+           <th  scope="row">{{product.id}}</th >
+           <td> {{product.name}}</td> 
+           <td>{{product.price}}</td >
+            <td><img src="{{product.image}}"></td> 
+           <td> <a  href="/details/{{product.id}}" class= "btn btn-success">View</a> 
+                   
+           <a  href="/edit/{{product.id}}" class= "btn btn-default">Edit</a>
+           <a href="/delete/{{product.id}}"  class="btn btn-danger">Delete</a >        
+           </td>
+       </tr>
+{% endfor %}
+   </tbody >
+   </table> #}
+   {% for product in products %}
+   <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{product.image}}" class="card-img img-fluid" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.price}}</p>
+        <p class="card-text"><small class="text-muted">{{product.type}}</small></p>
+       
+        <a  href="/details/{{product.id}}" class= "btn btn-success">View</a>
+        <a  href="/edit/{{product.id}}" class= "btn btn-info">Edit</a>
+           <a href="/delete/{{product.id}}"  class="btn btn-danger">Delete</a > 
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+   </div>
+   </div>
+   </div> 
+{% endblock %}
